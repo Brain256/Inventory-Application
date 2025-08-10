@@ -4,22 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <form method="POST" action="/new">
-        <label for="name">Team Name</label>
-        <input id="name" name="name" type="text" required>
+    <form method="POST" action="/new" id="create-form">
+        <div class="inputs-container">
+            <div>
+                <label for="name">Team Name</label>
+                <input id="name" name="name" type="text" required>
+            </div>
 
-        <label for="nation">Nation</label>
-        <input id="nation" name="nation" type="text" required>
+            <div>
+                <label for="nation">Nation</label>
+                <input id="nation" name="nation" type="text" required>
+            </div>
 
-        <label for="league">League</label>
-        <input id="league" name="league" type="text" required>
+            <div>
+                <label for="league">League</label>
+                <input id="league" name="league" type="text" required>
+            </div>
 
-        <label for="manager">Manager</label>
-        <input id="manager" name="manager" type="text" required>
-
-        <button type="submit">Submit</button>
+            <div>
+                <label for="manager">Manager</label>
+                <input id="manager" name="manager" type="text" required>
+            </div>
+        </div>
+        <button class="add-submit-btn" type="submit">Submit</button>
 
     </form>
 </body>

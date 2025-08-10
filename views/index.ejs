@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     
-    <a href="/new">Add Team</a>
+    <a href="/new" class="create-btn">Add Team</a>
     <table>
         <tr>
             <th>Team</th>
@@ -17,10 +18,10 @@
         </tr>
         <% teams.map(team => { %>
             <tr>
-            <td><%= team.name %></td>
-            <td><%= team.nation %></td>
-            <td><%= team.league %></td>
-            <td><%= team.manager %></td>
+                <td><%= team.name %></td>
+                <td><%= team.nation %></td>
+                <td><%= team.league %></td>
+                <td><%= team.manager %></td>
             </tr>
         <% }) %>
     </table>
