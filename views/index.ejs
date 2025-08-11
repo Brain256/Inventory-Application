@@ -7,32 +7,36 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    
-    <a href="/new" class="create-btn">Add Team</a>
-    <table>
-        <tr>
-            <th>Team</th>
-            <th>Nation</th>
-            <th>League</th>
-            <th>Manager</th>
-            <th>Actions</th>
-        </tr>
-        <% teams.map(team => { %>
-            <tr>
-                <td><%= team.name %></td>
-                <td><%= team.nation %></td>
-                <td><%= team.league %></td>
-                <td><%= team.manager %></td>
-                <td class="actions">
-                    <a href="/edit/<%= team.id %>" id="edit-btn">Edit</a>
-                    <form action="/<%= team.id %>?_method=DELETE" method="POST">
-                        <button id="delete-btn" type="submit">Delete</button>
-                    </form>
-                </td>
-            </tr>
-        <% }) %>
-    </table>
+    <div class="table-container">
 
+        <div class="create-container">
+            <h1>Football Team Inventory</h1>
+            <a href="/new" class="create-btn">Add Team</a>
+        </div>
+        <table>
+            <tr>
+                <th>Team</th>
+                <th>Nation</th>
+                <th>League</th>
+                <th>Manager</th>
+                <th>Actions</th>
+            </tr>
+            <% teams.map(team => { %>
+                <tr>
+                    <td><%= team.name %></td>
+                    <td><%= team.nation %></td>
+                    <td><%= team.league %></td>
+                    <td><%= team.manager %></td>
+                    <td class="actions">
+                        <a href="/edit/<%= team.id %>" id="edit-btn">Edit</a>
+                        <form action="/<%= team.id %>?_method=DELETE" method="POST">
+                            <button id="delete-btn" type="submit">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            <% }) %>
+        </table>
+    </div>
 
 </body>
 </html>
