@@ -7,26 +7,26 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <form method="POST" action="/new" id="create-form">
+    <form method="POST" action="<%= team ? "/edit/" + team.id : "/new" %>" id="create-form">
         <div class="inputs-container">
             <div>
                 <label for="name">Team Name</label>
-                <input id="name" name="name" type="text" required>
+                <input value="<%= team ? team.name : "" %>" id="name" name="name" type="text" required>
             </div>
 
             <div>
                 <label for="nation">Nation</label>
-                <input id="nation" name="nation" type="text" required>
+                <input value="<%= team ? team.nation : "" %>" id="nation" name="nation" type="text" required>
             </div>
 
             <div>
                 <label for="league">League</label>
-                <input id="league" name="league" type="text" required>
+                <input value="<%= team ? team.league : "" %>" id="league" name="league" type="text" required>
             </div>
 
             <div>
                 <label for="manager">Manager</label>
-                <input id="manager" name="manager" type="text" required>
+                <input value="<%= team ? team.manager : "" %>" id="manager" name="manager" type="text" required>
             </div>
         </div>
         <button class="add-submit-btn" type="submit">Submit</button>

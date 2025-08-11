@@ -23,7 +23,7 @@
                 <td><%= team.nation %></td>
                 <td><%= team.league %></td>
                 <td><%= team.manager %></td>
-                <td><a href="/new" id="edit-btn">Edit</a><button id="delete-btn">Delete</button></td>
+                <td><a href="/edit/<%= team.id %>" id="edit-btn">Edit</a><button id="delete-btn">Delete</button></td>
             </tr>
         <% }) %>
     </table>

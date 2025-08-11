@@ -7,4 +7,7 @@ indexRouter.get('/', indexController.teamGet);
 indexRouter.get('/new', indexController.teamCreateGet); 
 indexRouter.post('/new', indexController.teamCreatePost); 
 
+indexRouter.get('/edit/:id', indexController.teamUpdateGet); 
+indexRouter.post('/edit/:id', indexController.teamUpdatePost); 
+
 module.exports = indexRouter; 
