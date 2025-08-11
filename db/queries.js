@@ -18,4 +18,8 @@ const updateTeam = async (id, name, nation, league, manager) => {
     await pool.query('UPDATE teams SET name=$1, nation=$2, league=$3, manager=$4 WHERE teams.id = $5', [name, nation, league, manager, id])
 }
 
-module.exports = { getTeams, addTeam, getTeam, updateTeam }; 
+const deleteTeam = async (id) => {
+    await pool.query('DELETE FROM teams WHERE id = $1', [id]); 
+}
+
+module.exports = { getTeams, addTeam, getTeam, updateTeam, deleteTeam }; 

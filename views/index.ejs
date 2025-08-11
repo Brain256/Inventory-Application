@@ -23,7 +23,12 @@
                 <td><%= team.nation %></td>
                 <td><%= team.league %></td>
                 <td><%= team.manager %></td>
-                <td><a href="/edit/<%= team.id %>" id="edit-btn">Edit</a><button id="delete-btn">Delete</button></td>
+                <td class="actions">
+                    <a href="/edit/<%= team.id %>" id="edit-btn">Edit</a>
+                    <form action="/<%= team.id %>?_method=DELETE" method="POST">
+                        <button id="delete-btn" type="submit">Delete</button>
+                    </form>
+                </td>
             </tr>
         <% }) %>
     </table>

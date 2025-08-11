@@ -3,9 +3,15 @@ const path = require('path');
 
 const express = require('express'); 
 
-const indexRouter = require('./routes/indexRouter.js'); 
+const indexRouter = require('./routes/indexRouter.js');
+
+const methodOverride = require('method-override');
 
 const app = express();
+
+app.use(methodOverride('_method')); 
+
+
 
 app.set("view engine", "ejs"); 
 app.set("views", path.join(__dirname, 'views')); 

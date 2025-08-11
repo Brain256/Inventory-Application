@@ -8,6 +8,8 @@ indexRouter.get('/new', indexController.teamCreateGet);
 indexRouter.post('/new', indexController.teamCreatePost); 
 
 indexRouter.get('/edit/:id', indexController.teamUpdateGet); 
-indexRouter.post('/edit/:id', indexController.teamUpdatePost); 
+indexRouter.post('/edit/:id', indexController.teamUpdatePost);
+
+indexRouter.delete('/:id', indexController.teamDelete); 
 
 module.exports = indexRouter; 

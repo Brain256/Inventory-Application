@@ -88,3 +88,7 @@ tr:hover {
 label {
     display:block; 
 }
+
+.actions {
+    display:flex; 
+}
