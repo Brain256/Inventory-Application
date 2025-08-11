@@ -5,7 +5,7 @@ body {
     background-color:rgb(133, 207, 239); 
 }
 
-.create-btn, button {
+.create-btn, button, a {
     text-decoration:none; 
     color:white; 
     background-color:rgb(14, 170, 170); 
@@ -20,15 +20,31 @@ body {
 }
 
 .create-btn {
-    
     margin:20px; 
+}
+
+#edit-btn {
+    background-color:purple; 
+}
+
+#edit-btn:hover {
+    background-color:rgb(87, 0, 87); 
+}
+
+#delete-btn {
+    margin-left:10px; 
+    background-color:rgb(187, 3, 3); 
+}
+
+#delete-btn:hover {
+    background-color:rgb(132, 3, 3);
 }
 
 .add-submit-btn {
     margin-top:20px; 
 }
 
-.create-btn:hover, button:hover {
+.create-btn:hover, button:hover, a:hover {
     background-color:darkcyan; 
 }
 
