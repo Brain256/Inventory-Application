@@ -15,6 +15,7 @@
             <th>Nation</th>
             <th>League</th>
             <th>Manager</th>
+            <th>Actions</th>
         </tr>
         <% teams.map(team => { %>
             <tr>
@@ -22,6 +23,7 @@
                 <td><%= team.nation %></td>
                 <td><%= team.league %></td>
                 <td><%= team.manager %></td>
+                <td><a href="/new" id="edit-btn">Edit</a><button id="delete-btn">Delete</button></td>
             </tr>
         <% }) %>
     </table>
